@@ -1,0 +1,132 @@
+body {
+    background-color: #0e0e10;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+h1 {
+    color: #9146FF;
+    font-size: 3rem; /* 1rem = базовый размер шрифта (обычно 16px), значит ~48px */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff4d6d;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* расстояние между строками, чтобы не слипались */
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #9146FF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.container {
+    position: relative; /* теперь мы можем позиционировать детей абсолютно относительно этого контейнера */
+    min-height: 100vh; /* контейнер займёт всю высоту окна */
+    display: flex;
+    align-items: center; /* центрируем контент по вертикали */
+    justify-content: center; /* центрируем по горизонтали */
+}
+
+.content {
+    max-width: 600px; /* текст не слишком широкий, останется по центру */
+    text-align: center;
+    z-index: 10; /* текст будет поверх картинки, если они перекрываются */
+    padding: 20px;
+}
+
+.side-image {
+    position: absolute;
+    right: 0;
+    bottom: 0; /* картинка начинается от нижнего края контейнера */
+    max-width: 35vw; /* уменьшили ширину до 35% ширины окна */
+    max-height: 90vh; /* ограничили высоту, чтобы не вылезала за верх */
+    height: auto; /* сохраняем пропорции */
+    width: auto; /* чтобы не искажалась */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.support-btn {
+    background: #f0ad4e; /* тёплый оранжевый или золотой */
+    color: #1a1a1a; /* тёмный текст на светлой кнопке */
+    font-weight: bold; /* жирный текст */
+    border: 2px solid #ffd700; /* золотая рамка */
+    box-shadow: 0 0 15px rgba(240, 173, 78, 0.5);
+}
+
+    .support-btn:hover {
+        background: #ffc107; /* при наведении становится светлее */
+    }
+
+.twitch-btn {
+    background: #9146FF; /* фиолетовый, как сейчас */
+    color: white;
+}
+
+.telegram-btn {
+    background: #0088cc; /* синий */
+    color: white;
+}
+
+.social-btn {
+    display: inline-flex; /* позволяет управлять внутренним расположением */
+    flex-direction: column; /* элементы друг под другом */
+    align-items: center; /* выравнивание по центру горизонтали */
+    justify-content: center;
+    gap: 8px; /* расстояние между иконкой и текстом */
+    padding: 15px 25px; /* увеличенные отступы */
+    width: 180px; /* или другое значение, например 200px */
+    box-sizing: border-box;
+}
+
+.btn-icon {
+    width: 32px; /* ширина иконки */
+    height: 32px; /* высота */
+    object-fit: contain; /* сохраняет пропорции, не обрезая */
+}
+
+.support-section {
+    margin-top: 40px; /* отступ сверху, чтобы отделить от кнопок соцсетей */
+    text-align: center;
+}
+
+    .support-section p {
+        font-size: 1.1rem;
+        color: #ccc;
+        margin-bottom: 10px; /* расстояние от текста до кнопки */
+    }
+
+.support-btn {
+    /* стили оставляем как раньше, но можем чуть увеличить */
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    background: #f0ad4e;
+    color: #1a1a1a;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #ffd700;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .support-btn:hover {
+        background: #ffc107;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
